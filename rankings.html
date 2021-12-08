@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rankings</title>
+</head>
+<body>
+    <h1>Clan Member Progress (Reset at 00:00)</h1>
+    <table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col" class="text_left">Ranking</th>
+            <th scope="col">
+            Character</th>
+            <th scope="col">Clan</th>
+                            <th scope="col" class="text_right">Power Score                </th>
+        </tr>
+    </thead>
+    <tbody id="haha"></tbody>
+</table>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    let names = ['ISkadiI','4shuraa','toostiee','Barbequeque','Dauthus','R a Z z Z z','KurizuLaiii','BigCookie','KuyaMarc','Manobun','yIlusionyz','IKAW TO BES','keonnnn29','Bloodkira','Juantsismoso','Qwertops','Heimiel','Ickobaqui','porkchun','Kitigiming','FlautsaEnai','SaduhPINAS','Baaaesick','Azure Cross','BL 4 NK','R3m13l','Ryudji','Fzing','HunterMerlin','kikz04','lightace430','RaenaReign','F4TIMAY','Kirui13','V1xZai','SAPPHIREX3','Clarrisa','siwyy','OreoMcFlurry','jhavs','Yutasakalam','Riinachan','ByeFeliciA','QueenEJ','Asiancrown','NORJAM255','BowKeeper','PH Akia','R4iqt','chickenamit'];
+    names.forEach(index => {
+        rankings(index);
+        console.log(index);
+    });
+    function rankings(name)
+    {
+        $.ajax({
+        url: "https://forum.mir4global.com/rank",
+        data: {
+            
+            ranktype: 1,
+            worldgroupid: 51,
+            worldid:81,
+            classtype: "",
+            searchname: name,
+            globalsearch: "",
+        },
+        success: function( result ) {
+            $( "#haha" ).append(jQuery(result).find('#lists').html());
+            console.log(result);
+        }
+        });
+    }
+    
+    
+</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
