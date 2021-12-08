@@ -32,7 +32,8 @@
     function rankings(name)
     {
         $.ajax({
-        url: "https://crossorigin.me/https://forum.mir4global.com/rank",
+        url: "https://forum.mir4global.com/rank",
+            crossDomain: true,
         data: {
             
             ranktype: 1,
