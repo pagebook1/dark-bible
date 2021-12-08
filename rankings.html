@@ -33,14 +33,7 @@
     {
         $.ajax({
         url: "https://forum.mir4global.com/rank",
-        crossDomain: true,
-            "headers": {
-              "accept": "application/json",
-              "Access-Control-Allow-Origin":"*"
-          },
-        xhrFields: {
-            withCredentials: true
-        },
+        cors:false,
         data: {
             
             ranktype: 1,
