@@ -32,7 +32,11 @@
     function rankings(name)
     {
         $.ajax({
-        url: "https://sweet-snow-477e.pagebook-kev5808.workers.dev/?https://forum.mir4global.com/rank",
+        url: "https://forum.mir4global.com/rank",
+            cors:{
+                origin: ['https://pagebook1.github.io/'],
+                methods: 'GET,HEAD,PUT,PATCH,DELETE',
+            },
         data: {
             
             ranktype: 1,
