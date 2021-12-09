@@ -1,24 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Dark Bible Clan Rankings">
-    <meta property="og:url" content="https://forum.mir4global.com">
-    <meta property="og:title" content="MIR4, Official launch">
-    <meta property="og:locale" content="ko_KR">
-    <meta property="og:image" content="https://file.mir4global.com/mir4-global/img/sns.jpg?v=5">
-    <meta property="og:image:secure_url" content="https://file.mir4global.com/mir4-global/img/sns.jpg?v=5">
-    <meta property="og:description" content="From my battle to our war, MMORPG MIR4">
-    <meta name="twitter:card" content="summary_large_image" />
-        <link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/common-center.css?v=5">
-        <link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/layout-center/style.css?v=5">
+<title>Dark Bible Rankings</title>
+<script src="https://file.mir4global.com/forum/js/desktop/first.js"></script>
+<link rel="shortcut icon" href="https://file.mir4global.com/forum/img/favicon.ico">
+<link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/common-center.css?v=5">
+<link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/layout-center/style.css?v=5">
 
-        <link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/board-center/style.css?v=5">
-        <link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/sub.css?v=5">
-        <link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/global.css?v=5">
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/board-center/style.css?v=5">
+<link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/sub.css?v=5">
+<link rel="stylesheet" href="https://file.mir4global.com/forum/css/desktop/global.css?v=5">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Roboto:wght@300;400;500;700;900&display=swap">
+<script src="https://file.mir4global.com/forum/js/vendor/jquery-1.12.2.min.js"></script>
+<script src="https://file.mir4global.com/forum/js/vendor/jquery.modal.min.js"></script>
+<script src="https://file.mir4global.com/forum/js/vendor/swiper.min.js"></script>
+<script src="https://file.mir4global.com/forum/js/vendor/iscroll-probe.js"></script>
+<script src="https://file.mir4global.com/forum/js/desktop/desktop-center.js?v=5"></script>
+
+<link rel="stylesheet" type="text/css" href="https://file.mir4global.com/static/forum/css/jquery.simple-dtpicker.css" />
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/jquery.simple-dtpicker.js"></script>
+<script type="text/javascript">
+// 자바스크립트에서 사용하는 전역변수 선언
+var cb_url = "https://forum.mir4global.com";
+var cb_cookie_domain = "";
+var cb_charset = "UTF-8";
+var cb_time_ymd = "2021-12-09";
+var cb_time_ymdhis = "2021-12-09 14:24:23";
+var layout_skin_path = "_layout/basic";
+var view_skin_path = "rank/basic";
+var is_member = "1";
+var is_admin = "";
+var cb_admin_url = "";
+var cb_board = "";
+var cb_board_url = "";
+var cb_device_type = "desktop";
+var cb_csrf_hash = "e582b74ff46af889016a3df9c2bcd292";
+var cookie_prefix = "";
+var cb_noti_data = '';
+var cb_my_activity_data = '';
+</script>
+
+<!--[if lt IE 9]>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/html5shiv.min.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/common.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/jquery.validate.extension.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/sideview.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/sns.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/js.cookie.js"></script>
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/clipboard.2.0.8.min.js"></script>
+
+<!-- jQuery.ui Datepicker -->
+<link rel="stylesheet" type="text/css" href="https://file.mir4global.com/static/forum/css/jquery-ui.min.css" /><!-- jquery-ui v.1.12.1 -->
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/jquery-ui.min.js"></script><!-- jquery-ui v.1.12.1 -->
+<script type="text/javascript" src="https://file.mir4global.com/static/forum/js/jquery.ui.datepicker-ko.min.js"></script><!-- jquery-ui.datepicker-ko v.1.9.2 -->
+
+<script>
+  let isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent); 
+  let isIOSMobile = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;                                          
+  if (!isMobile && isIOSMobile && cb_device_type === 'desktop') {   
+    //아이패드로 확인될경우 강제로 모바일VIEW
+    set_cookie('device_view_type','mobile',24,'/');
+    location.reload();
+  }
+</script>
+
+<!-- Google Tag Manager -->
+<script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WKRC7BR');
+    function gtag(a,b,c) {}
+</script>
+
     <title>Rankings</title>
 </head>
 <body>
